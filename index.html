@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad M3S5 Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 1fr 220px;
+      grid-template-rows: 80px 1fr 1fr 1fr 40px;      
+      grid-template-areas:
+          "header header header"
+          "sidebar main wildcard1"
+          "sidebar main wildcard2"
+          "sidebar main wildcard3"
+          "footer footer footer";
+      gap: 15px;
+      min-height: 90vh;
+    }
+
+    header { 
+      grid-area: header; 
+      background-color: #aa0037;
+      color: white;
+    }
+    
+    .sidebar { 
+      grid-area: sidebar;  
+      background-color: #98c5d1;
+    }
+    
+    .main-content { 
+      grid-area: main;   
+      background-color: #eeeeee; 
+    }
+    
+    .wildcard-1 { 
+      grid-area: wildcard1; 
+      background-color: #e4daff;
+    }
+    
+    .wildcard-2 { 
+      grid-area: wildcard2; 
+      background-color: #e4daff; 
+    }
+    
+    .wildcard-3 { 
+      grid-area: wildcard3; 
+      background-color: #e4daff; 
+    }
+    
+    footer { 
+      grid-area: footer; 
+      background-color: #37474f; 
+      color: white;
+    }
+
+    header, .sidebar, .main-content, .wildcard-1, .wildcard-2, .wildcard-3, footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #777;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header>Header</header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="main-content">Main Content</main>
+    
+    <div class="wildcard-1">Wildcard 1</div>
+    <div class="wildcard-2">Wildcard 2</div>
+    <div class="wildcard-3">Wildcard 3</div>
+
+    <footer>Footer</footer>
+  </div>
+
+</body>
+</html>
